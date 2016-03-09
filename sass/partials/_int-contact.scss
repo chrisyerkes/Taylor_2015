@@ -1,0 +1,86 @@
+// Partial
+
+// Map
+.map {
+	height: 435px;
+	margin-bottom: 90px;
+	background: $gray;
+}
+
+// Form
+.contactForms {
+	padding: 90px 0;
+
+	.row {
+		-webkit-transition: opacity 0.35s;
+		transition: opacity 0.35s;
+
+		&.formOpen {
+			opacity: 0;
+		}
+	}
+	.buttonToggles {
+		span {
+			display: inline-block;
+			margin-top: 20px;
+			margin: 20px 15px 0;
+			font-weight: $bold;
+			font-size: 12px;
+			text-transform: uppercase;
+			color: lighten($darkGray, 28%);
+		}
+	}
+}
+	.contactForm {
+		display: none;
+
+		.theForm {
+			margin-top: 0;
+			opacity: 0;
+			-webkit-transition: margin 0.35s, opacity 0.35s;
+			transition: margin 0.35s, opacity 0.35s;
+
+			&.formOpen {
+				opacity: 1;
+			}
+			.closeForm {
+				width: 18px;
+				height: 18px;
+				position: absolute;
+				right: 10px;
+				top: -20px;
+				background: url(images/svg/icon_close_black.svg) no-repeat;
+				background-size: cover;
+				outline: none;
+				border: none;
+				opacity: 0.15;
+				-webkit-transition: opacity 0.25s;
+				transition: opacity 0.25s;
+
+				&:hover {
+					opacity: 0.3;
+				}
+			}
+		}
+	}
+
+// Mobile
+@media (max-width: 767px) {
+
+	.contactForms {
+		h5 {
+			margin-bottom: 20px;
+		}
+		
+		.buttonToggles {
+			.link.button {
+				text-align: center;
+				display: block;
+			}
+			span {
+				margin: 10px 0;
+			}
+		}
+	}
+
+}

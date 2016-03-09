@@ -1,0 +1,224 @@
+// Partial
+
+// Portfolio Filters
+.controls {
+	&.filterLinks {
+		list-style: none;
+		margin: 5px 0 40px;
+		padding: 0;
+		display: inline-block;
+
+		fieldset {
+			display: inline-block;
+			padding-right: 14px;
+			margin-right: 10px;
+			border-right: 2px solid $gray;
+			
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				border: none;
+				margin-right: 0;
+			}
+		}
+
+		button {
+			background: none;
+			border: 0;
+			text-transform: uppercase;
+			padding: 0;
+			margin: 0 13px;
+			line-height: 22px;
+			font-weight: $bold;
+			letter-spacing: 0.04em;
+			outline: 0;
+			color: lighten($body, 20%);
+			-webkit-transition: all 0.25s;
+			transition: all 0.25s;
+
+			&:hover {
+				color: $body;
+			}
+			&.active {
+				color: $orange;
+			}
+		}
+	}
+}
+
+// Portfolio - Using most styles from _home-featured-work.scss file for the structure. Adding in animations here
+.portfolio {
+	.videoCont {
+		height: 300px;
+		margin: 0;
+
+		.whiteWash {
+			position: absolute;
+			top: 0; 
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #000;
+		}
+		.videoMsg {
+			width: 100%;
+			height: 100%;
+
+			.playBtn {
+				display: block;
+			}
+		}
+	}
+}
+	.gridItem {
+		display: none;
+		// opacity: 1;
+		// visibility: visible;
+		-webkit-transition: height 0.45s, width 0.45s;
+		transition: height 0.45s, width 0.45s;
+		-webkit-transition-timing-function: cubic-bezier(0.42,0,0.58,1);
+		-moz-transition-timing-function: cubic-bezier(0.42,0,0.58,1);
+		transition-timing-function: cubic-bezier(0.42,0,0.58,1);
+
+		&.video {
+			background: darken($darkGray, 20%);
+			color: $white;
+		}
+
+		// Hover Effect
+		.hover {
+			opacity: 0;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			color: $white;
+			cursor: pointer;
+			text-decoration: none;
+			background: rgba(0,0,0,.7);
+			-webkit-transition: opacity 0.25s;
+			transition: opacity 0.25s;
+			z-index: 20;
+			
+			&::before {
+				content: " ";
+				display: inline-block;
+				height: 100%;
+				width: 1%;
+				vertical-align: middle;
+			}
+			.vert {
+				display: inline-block;
+				vertical-align: middle;
+				position: relative;
+
+				&::before {
+					content: " ";
+					position: absolute;
+					top: -20px;
+					left: 50%;
+					width: 60px;
+					height: 3px;
+					background: $white;
+					margin-left: -30px;
+					z-index: 100;
+				}
+			}
+		}
+		.bgImg {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+			z-index: 10;
+		}
+		h3, h4, .bgImg {
+			-webkit-transition: all 0.25s;
+			transition: all 0.25s;
+		}
+		h3 {
+			font-family: $serif;
+			font-style: normal;
+			font-size: 33px;
+			line-height: 36px;
+			margin-bottom: 15px;
+			margin-top: 5px;
+			opacity: 0;
+			-webkit-transform: translate3d(0,-20px,0);
+			transform: translate3d(0,-20px,0);
+		}
+		h4 {
+			font-weight: $bold;
+			font-size: 13px;
+			line-height: 17px;
+			text-transform: uppercase;
+			letter-spacing: 0.04em;
+			opacity: 0;
+			-webkit-transform: translate3d(0,20px,0);
+			transform: translate3d(0,20px,0);
+		}
+		&:hover {
+			.hover {
+				opacity: 1;
+			}
+			h3, h4 {
+				opacity: 1;
+				-webkit-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+			}
+			.bgImg {
+				-webkit-transform: scale(1.08);
+				transform: scale(1.08);
+			}
+		}
+		// Filter Effect
+		&.toggled {
+			// opacity: 0;
+			// display: none;
+			// visibility: hidden;
+			// margin-top: -300px;
+		}
+	}
+
+// Tablet
+@media (min-width: 768px) and (max-width: 991px) {
+
+	.gridItem {
+		height: 200px;
+		
+		&.gridLarge {
+			height: 275px;
+		}
+		h2 {
+			font-size: 25px;
+			line-height: 28px;
+		}
+		h3 {
+			font-size: 25px;
+			line-height: 31px;
+		}
+		h4 {
+			font-size: 12px;
+		}
+	}
+	.portfolio .gridItem {
+		&.video {
+			height: 200px;
+			
+			h2 {
+				-webkit-transform: translate3d(-50%, -120%, 0);
+				transform: translate3d(-50%, -120%, 0);
+			}
+			.playBtn {
+				margin-top: 5px;
+			}
+		}
+	}
+
+}

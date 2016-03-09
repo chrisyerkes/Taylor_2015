@@ -1,0 +1,106 @@
+// Module
+
+hr {
+	clear: both;
+	border-color: $gray;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+@mixin small-bullets() {
+	list-style: none;
+
+	li {
+		clear: both;
+		position: relative;
+		padding-left: 10px;
+
+		&::before {
+			content: '\2022';
+			font-size: 95%;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+}
+
+// Section
+.graySection {
+	background: $lightGray;
+	
+	&.photoStrip {
+		background: darken($lightGray, 10%);
+	}
+	&.workLink {
+		background: darken($darkGray, 10%);
+
+		.sectionIntro {
+			padding: 35px 0 40px;
+			color: $gray;
+		}
+
+			h2 {
+				color: $white;
+				margin-bottom: 17px;
+			}
+	}
+	.link.button.teal {
+		@include anim-btn($teal, $darkGray, $teal, $white, $teal, $teal);
+	}
+}
+.sectionIntro {
+	padding: 55px 0;
+
+	h2 {
+		// text-rendering: optimizeLegibility;
+	}
+}
+
+.screamo {
+	opacity: 1;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 100000;
+	background: $gray;
+	-webkit-transition: opacity 0.25s;
+	transition: opacity 0.25s;
+	overflow: hidden;
+
+	&.loaded {
+		opacity: 0;
+	}
+	video {
+		width: 100%;
+		height: auto;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate3d(-50%,-50%,0);
+		transform: translate3d(-50%,-50%,0);
+	}
+}
+
+// Tablet
+@media (min-width: 768px) and (max-width: 991px) {
+
+	br {
+		display: none;
+	}
+
+}
+
+// Mobile
+@media (max-width: 767px) {
+	
+	br {
+		display: none;
+	}
+	.sectionIntro {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+}

@@ -1,0 +1,84 @@
+// Partial
+
+// Media Grid
+.officeVideo {
+	.pictureCol {
+		-webkit-transition: width 0.25s;
+		transition: width 0.25s;
+	}
+	.picture,
+	.video {
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		color: $white;
+		padding: 25px 25px 15px;
+	}
+	.picture {
+		height: 245px;
+		border-top: 1px solid $white;
+	}
+	.picture:first-child {
+		border: none;
+	}
+	.video {
+		height: 490px;
+		border-left: 1px solid $white;
+		border-right: 1px solid $white;
+		-webkit-transition: width 0.25s;
+		transition: width 0.25s;
+		
+		.videoMsg {
+			width: 100%;
+
+			h2 {
+				text-align: center;
+				font-family: $sans;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				-webkit-transform: translate3D(-50%, -90%, 0);
+				transform: translate3D(-50%, -90%, 0);
+				width: 100%;
+				text-transform: uppercase;
+				font-weight: $extra-bold;
+				font-size: 35px;
+				line-height: 36px;
+			}
+			.playBtn {
+				@include anim-play-btn($white, $white, $white, $orange, $white, $white);
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -26px;
+				margin-top: 15px;
+			}
+		}
+		
+		.vidContainer {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		&.opened {
+			width: 871.1111px;
+		}
+	}
+}
+
+// Slideshows
+.picSlider01,
+.picSlider02 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	.slides > li {
+		background-size: cover;
+		background-position: center center;
+	}
+}

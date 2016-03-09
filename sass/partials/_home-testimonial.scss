@@ -1,0 +1,25 @@
+// Partial
+
+// Testimonial
+.testimonial {
+}
+	.highFives {
+		position: absolute;
+		right: 0;
+		top: 40px;
+	}
+	.quote {
+		font-size: 31px;
+		line-height: 38px;
+	}
+	.source {
+		font-size: 20px;
+		line-height: 24px;
+		margin-top: 20px;
+		color: lighten($darkGray, 20%);
+		margin-bottom: 65px;
+
+		span {
+			color: $qCompany;
+		}
+	}

@@ -1,0 +1,86 @@
+// Partial
+
+// Client Logos
+.clientLogos {
+
+	h2 {
+		margin-bottom: 0px;
+	}
+	&.multiRow {
+		height: 690px;
+		margin-bottom: 65px;
+
+		.clientLogo {
+			margin-top: 40px;
+			margin-bottom: 110px;
+		}
+	}
+}
+.theLogos {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 20px;
+	overflow: hidden;
+	width: 100%;
+
+	.aLogo {
+		position: relative;
+		float: left;
+		display: inline-block;
+		width: 20%;
+		height: 150px;
+		cursor: pointer;
+
+		img {
+			max-width: 75%;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate3d(-50%, -50%, 0);
+			transform: translate3d(-50%, -50%, 0);
+			background: $white;
+		}
+		.logoNorm {
+			opacity: 1;
+			z-index: 100;
+			-webkit-transition: opacity 0.25s;
+			transition: opacity 0.25s;
+		}
+		.logoHover {
+			z-index: 50;
+		}
+		&:hover .logoNorm {
+			opacity: 0;
+		}
+	}
+}
+
+// Tablet
+@media (min-width: 768px) and (max-width: 991px) {
+	
+	.clientLogos.multiRow {
+		height: 830px;
+	}
+	.theLogos {
+		.aLogo  {
+			width: 25%;
+		}
+	}
+
+}
+
+// Mobile
+@media (max-width: 767px) {
+
+	.clientLogos.multiRow {
+		height: auto;
+	}
+	.theLogos {
+		.aLogo {
+			width: 50%;
+		}
+	}
+
+}

@@ -1,0 +1,61 @@
+// Partial
+
+// Heading Styles
+h1 {
+	font-family: $sans;
+	font-weight: $light;
+	font-size: 48px;
+	line-height: 55px;
+	margin: 0 0 5px;
+}
+h2 {
+	font-family: $serif;
+	font-weight: $regular;
+	font-size: 42px;
+	margin: 0;
+}
+h3 {
+	font-family: $serif;
+	font-weight: $regular;
+	font-size: 19px;
+	font-style: italic;
+	margin: 0;
+}
+h4 {
+	font-size: 22px;
+	line-height: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	margin: 0;
+}
+h5 {
+	font-size: 27px;
+	margin: 0;
+}
+h6 {
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: $bold;
+	margin: 0;
+}
+
+// Link Styles
+.link {
+	&.view {
+		@include link-view($darkGray, $darkGray);
+	}
+	&.button {
+		// @include standard-btn(darken($gray,20%));
+		@include anim-btn(darken($gray, 20%), $white, darken($gray, 20%), $white, $orange, $orange);
+	}
+	&.shareToggle {
+		text-transform: uppercase;
+		font-size: 11px;
+		font-weight: $bold;
+		letter-spacing: 0.04em;
+	}
+	&.orange {
+		color: $orange;
+	}
+}

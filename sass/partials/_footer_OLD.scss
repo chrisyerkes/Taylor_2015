@@ -1,0 +1,190 @@
+// Partial
+
+// Footer
+.footer {
+	background: lighten($darkGray, 5%);
+	padding-top: 20px;
+
+	address {
+		margin-top: 3px;
+		color: $gray;
+		
+		&.logo-left {
+			margin-left: 110px;
+		}
+		a {
+			color: $gray;
+
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+	.footerLogo {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 102px;
+		height: 44px;
+
+		img {
+			opacity: 1;
+			background: lighten($darkGray, 5%);
+			position: absolute;
+			top: 0;
+			left: 0;
+			-webkit-transition: opacity 0.45s;
+			transition: opacity 0.45s;
+
+			&.logoWhite {
+				z-index: 100;
+			}
+			&.logoOrange,
+			&.logoTeal,
+			&.logoYellow {
+				opacity: 0;
+			}
+		}
+		&.step01 {
+			img {
+				&.logoWhite {
+					opacity: 0;
+				}
+				&.logoOrange {
+					opacity: 1;
+				}
+			}
+		}
+		&.step02 {
+			img {
+				&.logoWhite,
+				&.logoOrange {
+					opacity: 0;
+				}
+				&.logoTeal {
+					opacity: 1;
+				}
+			}
+		}
+		&.step03 {
+			img {
+				&.logoWhite,
+				&.logoTeal {
+					opacity: 0;
+				}
+				&.logoYellow {
+					opacity: 1;
+				}
+			}
+		}
+		&.step04 {
+			img {
+				&.logoYellow {
+					opacity: 0;
+				}
+				&.logoWhite {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+	.socialLinks {
+		padding: 0;
+		list-style: none;
+		position: absolute;
+		right: 0;
+		top: 3px;
+
+		li {
+			display: inline-block;
+			float: left;
+			margin-left: 10px;
+			background-color: darken($gray, 5%);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 17px 17px;
+			border-radius: 25px;
+			transform: translate3d(0,0,0);
+			-webkit-transition: all 0.25s;
+			transition: all 0.25s;
+			
+			&:hover {
+				// -webkit-transform: translate3d(-1px, -1px, 0);
+				// transform: translate3d(-1px, -1px, 0);
+				// -webkit-box-shadow: 3px 2px 0 0 rgba(0,0,0,.18);
+				// box-shadow: 3px 2px 0 0 rgba(0,0,0,.18);
+				background-color: $white;
+			}
+			a {
+				opacity: 1;
+				display: block;
+				width: 35px;
+				height: 35px;
+				text-indent: -999999px;
+				background-color: darken($gray, 5%);
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: 17px 17px;
+				border-radius: 25px;
+
+				&:hover {
+					opacity: 0;
+				}	
+			}
+			&.facebook {
+				background-image: url(images/svg/icon_facebook_orange.svg);
+				a {
+					background-image: url(images/svg/icon_facebook_dark-gray.svg);
+				}
+			}
+			&.twitter {
+				background-image: url(images/svg/icon_twitter_orange.svg);
+				a {
+					background-image: url(images/svg/icon_twitter_dark-gray.svg);
+				}
+			}
+			&.pinterest {
+				background-image: url(images/svg/icon_pinterest_orange.svg);
+				a {
+					background-image: url(images/svg/icon_pinterest_dark-gray.svg);
+				}
+			}
+			&.linkedin {
+				background-image: url(images/svg/icon_linkedin_orange.svg); 
+				a {
+					background-image: url(images/svg/icon_linkedin_dark-gray.svg);
+				}
+			}
+			&.youtube {
+				background-image: url(images/svg/icon_youtube_orange.svg);
+				a {
+					background-image: url(images/svg/icon_youtube_dark-gray.svg);
+				}
+			}
+			&.google {
+				background-image: url(images/svg/icon_google_orange.svg);
+				a {
+					background-image: url(images/svg/icon_google_dark-gray.svg);
+				}
+			}
+			&.instagram {
+				background-image: url(images/svg/icon_instagram_orange.svg);
+				a {
+					background-image: url(images/svg/icon_instagram_dark-gray.svg);
+				}
+			}
+			&.behance {
+				background-image: url(images/svg/icon_behance_orange.svg);
+				a {
+					background-image: url(images/svg/icon_behance_dark-gray.svg);
+				}
+			}
+			&.mail {
+				background-image: url(images/svg/icon_mail_orange.svg);
+				a {
+					background-image: url(images/svg/icon_mail_white.svg);
+				}
+			}
+		}
+	}

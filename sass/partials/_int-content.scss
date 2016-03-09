@@ -1,0 +1,128 @@
+// Partial
+
+.intPageHero {
+	min-height: 435px;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-bottom: 90px;
+}
+.interior {
+	padding-top: 98px;
+	margin-bottom: 80px;
+
+	.row {
+		overflow: hidden;
+	}
+}
+.pageContent {
+	margin-bottom: 80px;
+
+	h3 {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	h4 {
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	h5 {
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	p {
+		font-size: 17px;
+		line-height: 30px;
+	}
+	ul:not(.socialLinks) {
+		@include small-bullets();
+		padding: 0;
+	}
+}
+.accordionItem {
+	border-bottom: 1px solid $gray;
+
+	&:first-child {
+		border-top: 1px solid $gray;
+	}
+}
+	.accordionToggle {
+		display: block;
+		padding: 9px 0 8px;
+		color: #000;
+		font-weight: $bold;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+
+		span {
+			width: 16px;
+			height: 16px;
+			display: inline-block;
+			background: #000;
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin-right: 7px;
+			line-height: 0;
+			position: relative;
+			border-radius: 16px;
+			color: $white;
+			text-align: center;
+			padding-top: 6px;
+			font-weight: $bold;
+			font-size: 18px;
+			top: 3px;
+			
+			.closed,
+			.open {
+				background: none;
+				position: absolute;
+				left: 0;
+				top: 0;
+				text-indent: 1px;
+			}
+			.closed {
+				opacity: 1;
+				padding-top: 8px;
+			}
+			.open {
+				opacity: 0;
+			}
+			img {
+				opacity: 1;
+				width: 16px;
+				height: 16px;
+			}
+		}
+		&:focus,
+		&:active {
+			color: #000;
+		}
+		&.opened {
+			span {
+				.closed {
+					opacity: 0;
+				}
+				.open {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	.accordionContent {
+		display: none;
+	}
+
+// Mobile
+@media (max-width: 767px) {
+
+	.intPortfolio {
+		.interior {
+			margin-bottom: 0;
+
+			.gridItem:last-child {
+				border-bottom: 1px solid #fff;
+			}
+		}
+	}
+
+}

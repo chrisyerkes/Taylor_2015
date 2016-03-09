@@ -1,0 +1,20 @@
+// Module
+
+// Variables
+$white: #fff;
+$blackRGBA: rgba(0,0,0,1);
+$vidOverlay: rgba(0,0,0,.35);
+$lightGray: #ebebeb;
+$gray: #ccc;
+$darkGray: #666;
+$orange: #f90;
+$teal: #3dc7a4;
+@mixin tealRGB($alpha) { background-color: rgba(67,190,161,$alpha); }
+$orange: #f89921;
+@mixin orangeRGB($alpha) { background-color: rgba(248,153,33,$alpha); }
+$yellow: #ded94a;
+@mixin yellowRGB($alpha) { background-color: rgba(223,221,67,$alpha); }
+$body: #333;
+$qCompany: #f90;
+$navCol: #2f2f2f;
+$metaBg: rgba(27,27,27,.9);

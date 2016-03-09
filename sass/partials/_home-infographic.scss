@@ -1,0 +1,159 @@
+// Partial
+
+// Infographic
+.infographic {
+	position: relative;
+	width: 550px;
+	height: 600px;
+	margin: 0 auto;
+	background: $white;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		.sphere {
+			position: absolute;
+			left: 170px;
+			top: 195px;
+			width: 210px;
+			height: 210px;
+			@include tealRGB(1);
+			border-radius: 105px;
+			line-height: 210px;
+			color: $white;
+			text-transform: uppercase;
+			letter-spacing: .1em;
+
+			.bgColor {
+				position: absolute;
+				top: 0;
+				left: 0;
+				@include tealRGB(.3);
+				width: 100%;
+				height: 100%;
+				border-radius: 105px;
+				z-index: 50;
+			}
+			&.branding {
+				.bgColor {
+					background-repeat: no-repeat;
+					background-image: url(images/svg/info_branding.svg);
+					background-position: center 14px;
+					background-size: 122px;
+				}
+			}
+			&.marketing {
+				@include orangeRGB(1);
+
+				.bgColor {
+					background-image: url(images/svg/info_marketing.svg);
+					background-repeat: no-repeat;
+					background-position: 107px 14px;
+					@include orangeRGB(.3);
+					background-size: 89px;
+				}
+			}
+			&.digital {
+				@include yellowRGB(1);
+
+				.bgColor {
+					background-image: url(images/svg/info_digital.svg);
+					background-repeat: no-repeat;
+					background-position: 128px 120px;
+					@include yellowRGB(.3);
+					background-size: 68px;
+				}
+			}
+			&.investor {
+				.bgColor {
+					background-image: url(images/svg/info_investor.svg);
+					background-repeat: no-repeat;
+					background-position: center 166px;
+					background-size: 111px;
+				}
+			}
+			&.institutional {
+				@include orangeRGB(1);
+
+				.bgColor {
+					background-image: url(images/svg/info_institutional.svg);
+					background-repeat: no-repeat;
+					background-position: 13px 53px;
+					@include orangeRGB(.3);
+					background-size: 83px;
+				}
+			}
+			&.internal {
+				@include yellowRGB(1);
+
+				.bgColor {
+					background-image: url(images/svg/info_internal.svg);
+					background-repeat: no-repeat;
+					background-position: 13px 19px;
+					@include yellowRGB(.3);
+					background-size: 74px;
+				}
+			}
+		}
+		.infoCopy {
+			color: #333;
+			font-family: $serif;
+			font-size: 14px;
+			line-height: 20px;
+			text-transform: none;
+			letter-spacing: 0.02em;
+			background: $white;
+			display: block;
+			width: 130px;
+			height: 130px;
+			border-radius: 65px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -65px;
+			margin-top: -65px;
+			z-index: 100;
+
+			&::before {
+				content: '';
+				height: 35px;
+				display: block;
+			}
+		}
+	}
+}
+	.midText {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 214px;
+		height: 214px;
+		margin-left: -107px;
+		margin-top: -107px;
+		font-weight: 800;
+		font-size: 22px;
+		line-height: 26px;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		text-align: center;
+		background: $white;
+		z-index: 150;
+		border-radius: 107px;
+
+		&::before {
+			content: '';
+			display: block;
+			height: 43px;
+		}
+	}
+
+// Tablet
+@media (min-width: 768px) and (max-width: 991px) {
+
+	.mobInfographic img {
+		max-width: 70%;
+	}
+
+}

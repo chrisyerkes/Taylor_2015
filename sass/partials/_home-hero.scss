@@ -1,0 +1,104 @@
+// Partial
+
+// Slideshow Option
+.homeSlider {
+	.slides {
+		.slide {
+			padding-top: 260px;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+
+			h1 {
+				margin: 0 0 45px;
+			}
+		}
+	}
+	.flex-control-nav {
+		width: auto;
+		bottom: 13px;
+		right: 20px;
+		z-index: 100;
+	}
+	.flex-control-paging {
+		li a {
+			background: none;
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+			-o-box-shadow: none;
+			box-shadow: none;
+			border: 2px solid $white;
+
+			&.flex-active {
+				background: $white;
+			}
+		}
+	}
+}
+.downArrow {
+	position: absolute;
+	left: 50%;
+	bottom: -30px;
+	margin-left: -30px;
+	background: $gray;
+	width: 60px;
+	height: 60px;
+	border: 2px solid $white;
+	display: block;
+	text-align: center;
+	border-radius: 60px;
+	z-index: 100;
+
+	img {
+		position: relative;
+		top: 19px;
+	}
+	&.teal {
+		background: $teal;
+	}
+	&.black {
+		background: #000;
+	}
+}
+
+//Static Hero Option
+.hero {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+
+	// Static Option 2 CSS
+	.heroMsg {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		-webkit-transform: translateY(-70%);
+		transform: translateY(-70%);
+
+		h1 {
+			color: #f9f7e2;
+			font-family: $sans;
+			font-weight: $black;
+			font-size: 200px;
+			line-height: 170px;
+			text-transform: uppercase;
+			margin-bottom: 25px;
+		}
+		p {
+			margin-left: 15px;
+			color: #f9f7e2;
+			width: 600px;
+			font-family: $serif;
+			font-size: 35px;
+			line-height: 41px;
+
+			a {
+				color: #f9f7e2;
+			}
+		}
+	}
+}
