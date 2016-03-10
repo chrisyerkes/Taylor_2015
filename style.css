@@ -6525,10 +6525,19 @@ form {
       .photoStrip .photoItems li:last-child {
         margin-right: 0; }
     .photoStrip .photoItems .cellphone {
+      position: relative;
       width: 251px;
       height: 414px;
       background: url(images/fpo/fpo_work-iphone-display_small.png) no-repeat center center;
       background-size: cover; }
+      .photoStrip .photoItems .cellphone .phoneBG {
+        width: 187px;
+        height: 327px;
+        position: absolute;
+        top: 30px;
+        left: 31px;
+        background-repeat: no-repeat;
+        background-size: cover; }
 
 .workSliderCont {
   background-color: #666;
@@ -6634,6 +6643,11 @@ form {
   .photoStrip .photoItems li.cellphone {
     width: 200px;
     height: 332px; }
+    .photoStrip .photoItems li.cellphone .phoneBG {
+      width: 150px;
+      height: 262px;
+      top: 24px;
+      left: 24px; }
 
   .workSliderCont .workSlider .slides li img {
     width: 85%; } }
@@ -6656,6 +6670,11 @@ form {
     width: 200px !important;
     height: 332px;
     margin: 0 auto; }
+    .photoStrip .photoItems .cellphone .phoneBG {
+      width: 150px;
+      height: 262px;
+      top: 24px;
+      left: 24px; }
 
   .workSliderCont .workSlider .slides li img {
     width: 75%; }

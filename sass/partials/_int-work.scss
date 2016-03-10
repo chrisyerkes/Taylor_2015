@@ -162,10 +162,21 @@
 			}
 		}
 		.cellphone {
+			position: relative;
 			width: 251px;
 			height: 414px;
 			background: url(images/fpo/fpo_work-iphone-display_small.png) no-repeat center center;
 			background-size: cover;
+
+			.phoneBG {
+				width: 187px;
+				height: 327px;
+				position: absolute;
+				top: 30px;
+				left: 31px;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
 		}
 	}
 }
@@ -338,6 +349,13 @@
 				&.cellphone {
 					width: 200px;
 					height: 332px;
+
+					.phoneBG {
+						width: 150px;
+						height: 262px;
+						top: 24px;
+						left: 24px;
+					}
 				}
 			}
 		}
@@ -382,6 +400,13 @@
 				width: 200px !important;
 				height: 332px;
 				margin: 0 auto;
+
+				.phoneBG {
+					width: 150px;
+					height: 262px;
+					top: 24px;
+					left: 24px;
+				}
 			}
 		}
 	}
