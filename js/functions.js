@@ -573,7 +573,7 @@ if($('body').hasClass('about') || $('body').hasClass('home') || $('body').hasCla
 					wrkVidHeight = Math.round((wrkWidth/16)*9),
 					vidCont = $(this).closest('.videoCont'),
 					vidMsg = $(this).closest('.videoCont .videoMsg');
-				$(vidCont).removeClass('col-lg-4 col-md-4 col-sm-4');
+				$(vidCont).removeClass('col-lg-4 col-md-4 col-sm-6');
 				$(vidCont).addClass('col-lg-12 col-md-12 col-sm-12');
 				$(vidCont).css('height',wrkVidHeight);
 				$(vidCont).addClass('opened');
@@ -588,7 +588,7 @@ if($('body').hasClass('about') || $('body').hasClass('home') || $('body').hasCla
 				$('.workVid').removeClass('playing');
 				$('.videoCont, .videoMsg').removeClass('opened');
 				$('.videoCont').removeClass('col-lg-12 col-md-12 col-sm-12');
-				$('.videoCont').addClass('col-lg-4 col-md-4 col-sm-4');
+				$('.videoCont').addClass('col-lg-4 col-md-4 col-sm-6');
 				$('.videoCont').css('height','');
 				workPlayer.pauseVideo();
 				workPlayer.seekTo(0);

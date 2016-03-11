@@ -6412,6 +6412,8 @@ form {
       line-height: 31px; }
     .gridItem h4 {
       font-size: 12px; }
+    .gridItem br {
+      display: block; }
 
   .portfolio .gridItem.video {
     height: 200px; }
@@ -6419,7 +6421,10 @@ form {
       -webkit-transform: translate3d(-50%, -120%, 0);
       transform: translate3d(-50%, -120%, 0); }
     .portfolio .gridItem.video .playBtn {
-      margin-top: 5px; } }
+      margin-top: 5px; }
+    .portfolio .gridItem.video .videoMsg h2 {
+      font-size: 28px;
+      line-height: 32px; } }
 .workHero {
   height: 440px; }
 
@@ -7090,7 +7095,7 @@ form {
     left: 0;
     top: 0;
     width: 102px;
-    height: 44px; }
+    height: 46px; }
     .footer .footerLogo img {
       opacity: 1;
       background: #737373;
@@ -7187,7 +7192,23 @@ form {
   .footer address {
     font-size: 13px; }
     .footer address.logo-left {
-      margin-left: 89px; } }
+      margin-left: 89px; }
+  .footer br {
+    display: block; } }
+@media (max-width: 767px) {
+  .footer address.logo-left {
+    margin-top: 60px;
+    margin-left: 0; }
+  .footer .footerLogo {
+    width: 86px;
+    height: 39px;
+    left: 15px; }
+  .footer .socialLinks {
+    display: block;
+    position: relative;
+    top: 0; }
+    .footer .socialLinks li {
+      margin: 0 20px 17px; } }
 .tdAddress, .tdAddress p {
   font-family: "Sentinel A", "Sentinel B", serif;
   font-size: 30px;

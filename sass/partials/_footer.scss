@@ -25,7 +25,7 @@
 		left: 0;
 		top: 0;
 		width: 102px;
-		height: 44px;
+		height: 46px;
 
 		img {
 			opacity: 1;
@@ -182,6 +182,39 @@
 
 			&.logo-left {
 				margin-left: 89px;
+			}
+		}
+		br {
+			display: block;
+		}
+	}
+
+}
+
+// Mobile
+@media (max-width: 767px) {
+
+	.footer {
+		address.logo-left {
+			margin-top: 60px;
+			margin-left: 0;
+		} 
+		.footerLogo {
+			width: 86px;
+			height: 39px;
+			left: 15px;
+		}
+		.socialLinks {
+			display: block;
+			position: relative;
+			top: 0;
+
+			li {
+				margin: 0 20px 17px;
+
+				&:first-child {
+					// margin: 0;
+				}
 			}
 		}
 	}
